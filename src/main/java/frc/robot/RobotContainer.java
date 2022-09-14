@@ -31,7 +31,7 @@ public class RobotContainer {
   private DriveCommand m_driveCommand = new DriveCommand(m_driveTrainSub, m_xboxController);
   private PulleyUpCommand m_pulleyUpCommand = new PulleyUpCommand(m_launcherSub);
   private PulleyDownCommand m_pulleyDownCommand = new PulleyDownCommand(m_launcherSub);
-  //private CannonCommand m_cannonCommand = new CannonCommand(m_launcherSub);
+  private CannonCommand m_cannonCommand = new CannonCommand(m_launcherSub);
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
@@ -52,10 +52,10 @@ public class RobotContainer {
     final JoystickButton cannonButton;
     pulleyUpButton = new JoystickButton(m_xboxController, Constants.Y_BUTTON);
     pulleyDownButton = new JoystickButton(m_xboxController, Constants.A_BUTTON);
-    //cannonButton = new JoystickButton(m_xboxController, Constants.LEFT_BUMPER);
+    cannonButton = new JoystickButton(m_xboxController, Constants.LEFT_BUMPER);
     pulleyUpButton.whileHeld(m_pulleyUpCommand);
     pulleyDownButton.whileHeld(m_pulleyDownCommand);
-    //cannonButton.whileHeld(m_cannonCommand);
+    cannonButton.whileHeld(m_cannonCommand);
   }
 
   /**
