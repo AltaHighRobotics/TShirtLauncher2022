@@ -26,11 +26,11 @@ public class RobotContainer {
   private XboxController m_xboxController = new XboxController(Constants.XBOX);
   // The robot's subsystems and commands are defined here...
   private DriveTrainSub m_driveTrainSub = new DriveTrainSub();
-  //private LauncherSub m_launcherSub = new LauncherSub();
+  private LauncherSub m_launcherSub = new LauncherSub();
 
   private DriveCommand m_driveCommand = new DriveCommand(m_driveTrainSub, m_xboxController);
-  //private PulleyUpCommand m_pulleyUpCommand = new PulleyUpCommand(m_launcherSub);
-  //private PulleyDownCommand m_pulleyDownCommand = new PulleyDownCommand(m_launcherSub);
+  private PulleyUpCommand m_pulleyUpCommand = new PulleyUpCommand(m_launcherSub);
+  private PulleyDownCommand m_pulleyDownCommand = new PulleyDownCommand(m_launcherSub);
   //private CannonCommand m_cannonCommand = new CannonCommand(m_launcherSub);
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -53,8 +53,8 @@ public class RobotContainer {
     pulleyUpButton = new JoystickButton(m_xboxController, Constants.Y_BUTTON);
     pulleyDownButton = new JoystickButton(m_xboxController, Constants.A_BUTTON);
     //cannonButton = new JoystickButton(m_xboxController, Constants.LEFT_BUMPER);
-    //pulleyUpButton.whileHeld(m_pulleyUpCommand);
-    //pulleyDownButton.whileHeld(m_pulleyDownCommand);
+    pulleyUpButton.whileHeld(m_pulleyUpCommand);
+    pulleyDownButton.whileHeld(m_pulleyDownCommand);
     //cannonButton.whileHeld(m_cannonCommand);
   }
 

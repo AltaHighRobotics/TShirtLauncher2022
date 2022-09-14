@@ -5,7 +5,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Solenoid;
-import edu.wpi.first.wpilibj.motorcontrol.Victor;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 import java.util.Timer;
@@ -13,13 +13,13 @@ import java.util.TimerTask;
 
 public class LauncherSub extends SubsystemBase {
   /** Creates a new LauncherSub. */
-  private Victor pulleyMotor;
+  private WPI_TalonSRX pulleyMotor;
   private Solenoid launchSolenoid;
   private Timer timer;
   private TimerTask timerTask;
   public LauncherSub() 
   {
-    pulleyMotor = new Victor(Constants.PULLEY_MOTOR);
+    pulleyMotor = new WPI_TalonSRX(Constants.PULLEY_MOTOR);
     //launchSolenoid = new Solenoid(Constants.LAUNCH_SOLENOID);
     timer = new Timer();
     timerTask = new TimerTask(){
@@ -32,12 +32,12 @@ public class LauncherSub extends SubsystemBase {
 
   public void pulleyUp()
   {
-    pulleyMotor.set(Constants.PULLEY_SPEED);
+    pulleyMotor.set(Constants.PULLEY_UP_SPEED);
   }
 
   public void pulleyDown()
   {
-    pulleyMotor.set(-Constants.PULLEY_SPEED);
+    pulleyMotor.set(-Constants.PULLEY_DOWN_SPEED);
   }
 
   public void pulleyOff()

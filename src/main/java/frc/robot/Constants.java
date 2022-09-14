@@ -14,7 +14,7 @@ package frc.robot;
  */
 public final class Constants 
 {
-    public final static int PULLEY_MOTOR = 0; // 2
+    public final static int PULLEY_MOTOR = 5; // 2
     public final static int RIGHT_DRIVE_1 = 2;
     public final static int RIGHT_DRIVE_2 = 3;
     public final static int LEFT_DRIVE_1 = 1;
@@ -30,7 +30,9 @@ public final class Constants
 
     public final static int Y_BUTTON = 4;
     public final static int A_BUTTON = 1;
-    public final static double PULLEY_SPEED = 0.2;
+
+    public final static double PULLEY_UP_SPEED = 0.5;
+    public final static double PULLEY_DOWN_SPEED = 0.2;
 
     public final static double TURN_POWER = 1.0;
     public final static double DRIVE_SPEED = 1.0;
