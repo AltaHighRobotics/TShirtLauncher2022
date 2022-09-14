@@ -13,8 +13,8 @@ public class DriveCommand extends CommandBase {
   /** Creates a new DriveCommand. */
   private DriveTrainSub m_driveTrainSub;
   private XboxController m_xboxController;
+  
   private double leftStickY;
-  private double rightStickY;
   private double leftStickX;
 
   public DriveCommand(DriveTrainSub subsystem, XboxController xboxController) {
@@ -32,16 +32,10 @@ public class DriveCommand extends CommandBase {
   @Override
   public void execute() 
   {
-    rightStickY = m_xboxController.getRawAxis(Constants.RIGHT_Y_AXIS);
     leftStickY = m_xboxController.getRawAxis(Constants.LEFT_Y_AXIS);
     leftStickX = m_xboxController.getRawAxis(Constants.LEFT_X_AXIS);
 
-    //m_driveTrainSub.setRightMotors(-rightStickY);
-    //m_driveTrainSub.setLeftMotors(-leftStickY);
-
     m_driveTrainSub.setArcadeDrive(leftStickY, leftStickX * Constants.TURN_POWER);
-
-    System.out.println(rightStickY);
   }
 
   // Called once the command ends or is interrupted.

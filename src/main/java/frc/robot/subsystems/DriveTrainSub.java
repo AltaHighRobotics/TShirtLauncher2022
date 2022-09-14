@@ -22,17 +22,11 @@ public class DriveTrainSub extends SubsystemBase
     leftDrive1 = new VictorSPX(Constants.LEFT_DRIVE_1);
     leftDrive2 = new VictorSPX(Constants.LEFT_DRIVE_2);
 
-    //leftDrive1.setInverted(true);
-    //leftDrive2.follow(leftDrive1);
-
     rightDrive1 = new VictorSPX(Constants.RIGHT_DRIVE_1);
     rightDrive2 = new VictorSPX(Constants.RIGHT_DRIVE_2);
 
     rightDrive1.setInverted(true);
     rightDrive2.setInverted(true);
-
-    //rightDrive1.setInverted(true);
-    //rightDrive2.follow(rightDrive1);
   }
 
   public void setRightMotors(double speed)
