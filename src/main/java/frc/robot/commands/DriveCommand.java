@@ -15,6 +15,8 @@ public class DriveCommand extends CommandBase {
   private XboxController m_xboxController;
   private double leftStickY;
   private double rightStickY;
+  private double leftStickX;
+
   public DriveCommand(DriveTrainSub subsystem, XboxController xboxController) {
     // Use addRequirements() here to declare subsystem dependencies.
     m_driveTrainSub = subsystem;
@@ -32,8 +34,14 @@ public class DriveCommand extends CommandBase {
   {
     rightStickY = m_xboxController.getRawAxis(Constants.RIGHT_Y_AXIS);
     leftStickY = m_xboxController.getRawAxis(Constants.LEFT_Y_AXIS);
-    m_driveTrainSub.setRightMotors(-rightStickY);
-    m_driveTrainSub.setLeftMotors(-leftStickY);
+    leftStickX = m_xboxController.getRawAxis(Constants.LEFT_X_AXIS);
+
+    //m_driveTrainSub.setRightMotors(-rightStickY);
+    //m_driveTrainSub.setLeftMotors(-leftStickY);
+
+    m_driveTrainSub.setArcadeDrive(leftStickY, leftStickX * Constants.TURN_POWER);
+
+    System.out.println(rightStickY);
   }
 
   // Called once the command ends or is interrupted.

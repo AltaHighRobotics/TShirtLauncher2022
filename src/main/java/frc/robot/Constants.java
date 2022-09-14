@@ -14,19 +14,24 @@ package frc.robot;
  */
 public final class Constants 
 {
-    public final static int PULLEY_MOTOR = 2;
-    public final static int RIGHT_DRIVE_1 = 1;
+    public final static int PULLEY_MOTOR = 0; // 2
+    public final static int RIGHT_DRIVE_1 = 2;
     public final static int RIGHT_DRIVE_2 = 3;
-    public final static int LEFT_DRIVE_1 = 2;
+    public final static int LEFT_DRIVE_1 = 1;
     public final static int LEFT_DRIVE_2 = 8;
     public final static int LAUNCH_SOLENOID = 1;
     public final static int XBOX = 0;
     public final static int RIGHT_BUMPER = 6;
     public final static int LEFT_BUMPER = 5;
+
     public final static int LEFT_Y_AXIS = 1;
+    public final static int LEFT_X_AXIS = 0;
     public final static int RIGHT_Y_AXIS = 5;
+
     public final static int Y_BUTTON = 4;
     public final static int A_BUTTON = 1;
     public final static double PULLEY_SPEED = 0.2;
-    public final static double DRIVE_SPEED = 0.5;
+
+    public final static double TURN_POWER = 1.0;
+    public final static double DRIVE_SPEED = 1.0;
 }
