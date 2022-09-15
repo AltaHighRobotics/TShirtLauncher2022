@@ -50,12 +50,18 @@ public class RobotContainer {
     final JoystickButton pulleyUpButton;
     final JoystickButton pulleyDownButton;
     final JoystickButton cannonButton;
+    final JoystickButton cannonButton2;
+
     pulleyUpButton = new JoystickButton(m_xboxController, Constants.Y_BUTTON);
     pulleyDownButton = new JoystickButton(m_xboxController, Constants.A_BUTTON);
     cannonButton = new JoystickButton(m_xboxController, Constants.LEFT_BUMPER);
+    cannonButton2 = new JoystickButton(m_xboxController, Constants.RIGHT_BUMPER);
+
     pulleyUpButton.whileHeld(m_pulleyUpCommand);
     pulleyDownButton.whileHeld(m_pulleyDownCommand);
+
     cannonButton.whileHeld(m_cannonCommand);
+    cannonButton2.whileHeld(m_cannonCommand);
   }
 
   /**
