@@ -19,7 +19,7 @@ public final class Constants
     public final static int RIGHT_DRIVE_2 = 3;
     public final static int LEFT_DRIVE_1 = 1;
     public final static int LEFT_DRIVE_2 = 8;
-    public final static int LAUNCH_SOLENOID = 1;
+    public final static int LAUNCH_SOLENOID = 0;
     public final static int XBOX = 0;
     public final static int RIGHT_BUMPER = 6;
     public final static int LEFT_BUMPER = 5;

@@ -21,13 +21,14 @@ public class CannonCommand extends CommandBase {
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {}
+  public void initialize() {
+  }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() 
   {
-    m_launcherSub.launcherOn();
+    m_launcherSub.launcherOn(); 
     System.out.println("CannonCommand running");
   }
 
@@ -36,6 +37,7 @@ public class CannonCommand extends CommandBase {
   public void end(boolean interrupted) 
   {
     m_launcherSub.launcherOff();
+    System.out.println("CannonCommand stopped");
   }
 
   // Returns true when the command should end.

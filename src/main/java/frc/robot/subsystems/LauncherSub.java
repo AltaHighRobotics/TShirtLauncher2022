@@ -23,8 +23,10 @@ public class LauncherSub extends SubsystemBase {
   public LauncherSub() 
   {
     pulleyMotor = new WPI_TalonSRX(Constants.PULLEY_MOTOR);
-    launchSolenoid = new Solenoid(PneumaticsModuleType.REVPH, Constants.LAUNCH_SOLENOID);
+    launchSolenoid = new Solenoid(PneumaticsModuleType.CTREPCM, Constants.LAUNCH_SOLENOID);
+
     timer = new Timer();
+
     timerTask = new TimerTask(){
       @Override
         public void run() {
@@ -48,11 +50,13 @@ public class LauncherSub extends SubsystemBase {
     pulleyMotor.set(0.0);
   }
 
+  /*
   public void launcher()
   {
     launchSolenoid.set(true);
     timer.schedule(timerTask, 50);
   }
+  */
 
   public void launcherOff()
   {
