@@ -32,8 +32,8 @@ public class DriveTrainSub extends SubsystemBase
 
   public void setRightMotors(double speed)
   {
-    //rightDrive1.set(VictorSPXControlMode.PercentOutput, speed * Constants.DRIVE_SPEED);
-    rightDrive2.set(VictorSPXControlMode.PercentOutput, speed * Constants.DRIVE_SPEED);
+    rightDrive1.set(VictorSPXControlMode.PercentOutput, speed * Constants.DRIVE_SPEED);
+    //rightDrive2.set(VictorSPXControlMode.PercentOutput, speed * Constants.DRIVE_SPEED);
   }
 
   public void setLeftMotors(double speed)
